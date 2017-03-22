@@ -4,9 +4,6 @@
 		.MODEL		small
 		.STACK		100h
 		.DATA
-Msg1	DB			"New England is the winner",13,10,'$'
-Msg2	DB			"Atlanta is the winner",13,10,'$'
-Msg3	DB			"It is a tie!",13,10,'$'
 		.CODE
 rdr		PROC	near ; bl is our return
 
@@ -29,7 +26,7 @@ rdr		PROC	near ; bl is our return
 		
 		RET
 rdr		ENDP
-
+; another function to print
 Main:	mov		ax,@data
 		mov		ds,ax
 		
