@@ -24,3 +24,11 @@ Main:	mov		ax,@data
 		mov		ah,4ch
 		int		21h
 		END		Main
+
+; machine code equivalent
+
+; first, we need to fetch from 106H and place it in BX
+
+
+;		16     reg		address
+; 1000 1011 00 011 110 106H???
