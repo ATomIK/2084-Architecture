@@ -59,9 +59,9 @@ CALL  incr
 MOV   DL,BL
 
 
-===================================
-;				3/22/2017
-===================================
+===
+# 3/22/2017
+===
 
 SP is a pointer to the top of the stack.
 we have to copy SP's value to BP then we
@@ -75,3 +75,15 @@ BP is the pointer to SP. [BP+N] is getting a
 value N bytes away from the top of the stack.
 
 PUSH, POP = stack commands
+
+
+===
+# 3/29/2017
+===
+
+Logical shite
+
+"MASKS" Ex.
+
+mov		al,124		; 0111 1100
+					; if(3rd bit == 0 && 4th bit == 0);
