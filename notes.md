@@ -59,9 +59,9 @@ CALL  incr
 MOV   DL,BL
 
 
-===================================
-;				3/22/2017
-===================================
+===
+# 3/22/2017
+===
 
 SP is a pointer to the top of the stack.
 we have to copy SP's value to BP then we
@@ -76,6 +76,57 @@ value N bytes away from the top of the stack.
 
 PUSH, POP = stack commands
 
-here's a tutorial:
 
-https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Mips/stack.html
+===
+# 3/29/2017
+===
+
+"AND"
+
+mov		al,124		; 0111 1100
+
+and		al,0CH		; 0000 1100
+
+cmp		al,0		; now we compare these two
+je		Hell
+
+===
+
+"OR"
+
+mov		al,5		; 0000 0101
+
+or		al,30H		; make this hex
+
+===
+
+"NOT" - "bit flipping"
+
+mov		bl,125		; want to erase two rightmost bits
+					; 0111 1101
+mov		al,3		; 0000 0011
+not		al			; 1111 1100
+and		bl,al		; 0111 1100
+
+===
+
+"SHL" - left shift (each bit mul by 2)
+
+mov		al,3		; 0000 0011
+shl		al,2		; 0000 1100
+
+===
+
+"SHR" - right shift
+
+mov		al,36		; 0010 0100
+shr		al,2		; 0000 1001
+
+===
+
+#### Example of SHR, AND, O
+
+mov		bl,207		; 11001111
+shr		bl,6		; 00000011
+and		bl,1		; 00000001
+or		bl,30H		; 00110001
