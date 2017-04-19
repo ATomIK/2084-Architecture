@@ -135,3 +135,13 @@ or		bl,30H		; 00110001
 # 4/19/2017
 ===
 
+Arrays
+
+VAR 	DB		1, 2, 5, 87
+
+Accessing them:
+
+LEA		BX,VAR
+
+MOV		AL,[BX]
+MOV		[BX],AL
