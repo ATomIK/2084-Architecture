@@ -145,3 +145,37 @@ LEA		BX,VAR
 
 MOV		AL,[BX]
 MOV		[BX],AL
+
+===
+# 4/26/17
+===
+
+### Big numbers
+##### 2^32 max val = 65,000
+##### 2^32 max val = 4,294,967,296
+
+mov		ax,6230
+mov		bx,100
+mul		bx
+
+first half in DX, second half in AX
+
+DX = 9h
+AX = 8198h
+
+===
+
+mov		ax,31300
+mov		bx,47
+mov		dx,0
+div		bx
+
+ax gets the quotient, dx gets the remainder
+
+cin >> 356
+
+3, mul 10
++5
+
+35, mul 10
++ 6
