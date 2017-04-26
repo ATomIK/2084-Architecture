@@ -23,7 +23,8 @@ LUP:	mov		ah,1
 		mul		bh
 		mov		dx,ax	; dx is now our val again
 		
-		add		dx,bl
+		mov		bh,0
+		add		dx,bx
 		
 		jmp		LUP
 
@@ -37,6 +38,9 @@ DCOD:	; decoding here
 		;add		bx,1
 		
 		;lea		dx,ARR
+
+		
+			
 		mov		ah,9
 		int		21h
 		
